@@ -44,6 +44,7 @@ class SelectFilters:
 
         time.sleep(10)
         self.time_interval_bubble = self.driver.find_element(By.XPATH, self.frequency_bubble).get_attribute("textContent")
+        #print("Time interval is", self.time_interval_bubble)
 
     def select_calculationcontext(self):
         time.sleep(10)
