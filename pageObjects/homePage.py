@@ -40,7 +40,7 @@ class SelectFilters:
         self.frequency_selected = Select(self.driver.find_element(By.XPATH, self.drpfrequency_ele))
         self.frequency_selected.select_by_index(0)
         self.frequency_option = self.frequency_selected.first_selected_option
-        #print("Selected option is:", self.frequency_option.text)
+        print("Selected option is:", self.frequency_option.text)
 
         time.sleep(10)
         self.time_interval_bubble = self.driver.find_element(By.XPATH, self.frequency_bubble).get_attribute("textContent")
@@ -51,11 +51,11 @@ class SelectFilters:
         self.calculation_selected = Select(self.driver.find_element(By.XPATH, self.drpcalculation_ele))
         self.calculation_selected.select_by_index(0)
         self.calculation_option = self.calculation_selected.first_selected_option
-        #print("Selected option is: ", self.calculation_option.text)
+        print("Selected option is: ", self.calculation_option.text)
 
         time.sleep(10)
         self.calculation_bubble = self.driver.find_element(By.XPATH, self.calculation_bubble).get_attribute("textContent")
-        #print("Calculation Context is: ", self.calculation_bubble)
+        print("Calculation Context is: ", self.calculation_bubble)
 
     def select_displaycontent(self):
         time.sleep(10)
@@ -67,22 +67,13 @@ class SelectFilters:
         self.driver.find_element(By.XPATH, self.drpdisplaycontent_ele).click()
         self.driver.find_element(By.XPATH, self.fuelingstation_checkbox).click()
         self.displaycontent_option = self.driver.find_element(By.XPATH, self.fuelingstation_checkbox).get_attribute("value")
-        #print("selected Content option is: ", self.displaycontent_option)
+        print("selected Content option is: ", self.displaycontent_option)
 
         time.sleep(10)
         self.displaycontent_bubble = self.driver.find_element(By.XPATH, self.displaycontent_bubble).get_attribute("textContent")
-        #print("Display Content is: ", self.displaycontent_bubble)
+        print("Display Content is: ", self.displaycontent_bubble)
 
 
-
-
-
-
-
-
-
-
-    # def drp_display_content(self):
 
 
 
