@@ -41,6 +41,7 @@ class SelectFilters:
         self.frequency_selected.select_by_index(0)
         self.frequency_option = self.frequency_selected.first_selected_option
         print("Selected option is:", self.frequency_option.text)
+        print("Selected option is:", self.frequency_option.text)
 
         time.sleep(10)
         self.time_interval_bubble = self.driver.find_element(By.XPATH, self.frequency_bubble).get_attribute("textContent")
