@@ -41,7 +41,11 @@ class SelectFilters:
         self.frequency_selected.select_by_index(0)
         self.frequency_option = self.frequency_selected.first_selected_option
         print("Selected option is:", self.frequency_option.text)
-
+        # Sanjeev Changes
+        sorting_Array = [10,20,30,40]
+        for each_array in sorting_Array:
+            print(each_array)
+        # ==================
         time.sleep(10)
         self.time_interval_bubble = self.driver.find_element(By.XPATH, self.frequency_bubble).get_attribute("textContent")
         #print("Time interval is", self.time_interval_bubble)
@@ -64,6 +68,17 @@ class SelectFilters:
         if self.chk_selectall.is_selected():
             self.chk_selectall.click()
         time.sleep(7)
+
+        # Sanjeev find duplicate in array
+
+        array_duplicate = [10, 22, 11, 10, 9, 6]
+        length = len(array_duplicate)
+        for each_index in range(0,length):
+            for each_index_second in range(each_index+1,length):
+                if array_duplicate[each_index] == array_duplicate[each_index_second]:
+                    print("===== Duplicate Found =====")
+        # Sanjeev code ends here
+
         self.driver.find_element(By.XPATH, self.drpdisplaycontent_ele).click()
         self.driver.find_element(By.XPATH, self.fuelingstation_checkbox).click()
         self.displaycontent_option = self.driver.find_element(By.XPATH, self.fuelingstation_checkbox).get_attribute("value")
