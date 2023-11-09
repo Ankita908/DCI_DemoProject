@@ -32,6 +32,17 @@ class TestFilters:
         def test_select_calculationcontext(self,setup):
                 self.driver = setup
                 calculation_context = SelectFilters(self.driver)
+
+                # Sanjeev code
+                test_Cases = "pass"
+
+                if test_Cases:
+                        print("False")
+                else:
+                        print("False")
+                # Sanjeev code ends here
+
+
                 calculation_context.select_calculationcontext()
                 if calculation_context.calculation_option.text in calculation_context.calculation_bubble:
 
