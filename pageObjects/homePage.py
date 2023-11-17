@@ -36,10 +36,12 @@ class SelectFilters:
         print("Selected option is:", self.timerange_option.text)
 
     def select_frequency(self):
-        time.sleep(10)
+        time.sleep(20)
         self.frequency_selected = Select(self.driver.find_element(By.XPATH, self.drpfrequency_ele))
         self.frequency_selected.select_by_index(0)
         self.frequency_option = self.frequency_selected.first_selected_option
+        print("dsfdsfdsfsd")
+        print("sdfdsfdsfdss")
         print("Selected option is:", self.frequency_option.text)
         # Sanjeev Changes
         sorting_Array = [10,20,30,40]
